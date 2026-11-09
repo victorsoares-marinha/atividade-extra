@@ -1,0 +1,10 @@
+TecnoForja - Home de e-commerce (HTML5 + CSS3, sem frameworks)
+
+Como abrir: dê duplo clique em index.html (as fontes do Google exigem internet; sem ela, o navegador usa fontes substitutas).
+
+Estrutura:
+  index.html   -> estrutura semântica
+  style.css    -> toda a estilização
+  assets/img/  -> logotipo e imagens dos produtos (SVG)
+
+Os filtros rápidos funcionam só com CSS (inputs radio + labels).

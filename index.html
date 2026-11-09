@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoForja | Tecnologia e soluções industriais</title>
+  <meta name="description" content="Loja virtual de produtos tecnológicos e soluções industriais.">
+
+  <!-- Fontes: Inter (texto) e Barlow Condensed (títulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ CABEÇALHO ============ -->
+  <header class="topo">
+    <a class="topo__logo" href="index.html" aria-label="TecnoForja - página inicial">
+      <img src="assets/img/logo.svg" alt="TecnoForja" width="176" height="38">
+    </a>
+
+    <form class="topo__busca" role="search" onsubmit="return false">
+      <label class="sr-only" for="busca">Buscar produtos</label>
+      <input id="busca" type="search" placeholder="Busque por produto, marca ou código">
+      <button type="submit" class="btn btn--busca">Buscar</button>
+    </form>
+
+    <nav class="topo__acoes" aria-label="Conta e carrinho">
+      <a href="#">Entrar</a>
+      <a href="#" class="topo__carrinho">Carrinho <span class="topo__contador">0</span></a>
+    </nav>
+  </header>
+
+  <div class="layout">
+
+    <!-- ============ MENU LATERAL ============ -->
+    <aside class="lateral">
+      <nav aria-label="Categorias de produtos">
+        <h2 class="lateral__titulo">Categorias</h2>
+        <ul class="lateral__lista">
+          <li><a href="#vitrine" class="ativo">Destaques</a></li>
+          <li><a href="#vitrine">Ofertas</a></li>
+          <li><a href="#vitrine">Eletrônicos</a></li>
+          <li><a href="#vitrine">Ferramentas</a></li>
+          <li><a href="#vitrine">Automação</a></li>
+          <li><a href="#vitrine">Sensores e medição</a></li>
+          <li><a href="#vitrine">Acionamentos</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ============ ÁREA PRINCIPAL ============ -->
+    <main class="principal" id="vitrine">
+      <section class="vitrine" aria-labelledby="titulo-vitrine">
+        <h1 id="titulo-vitrine" class="vitrine__titulo">Produtos em destaque</h1>
+        <p class="vitrine__sub">Equipamentos para oficina, laboratório e chão de fábrica, com frete para todo o Brasil.</p>
+
+        <!-- Filtros rápidos (CSS puro: radios + labels) -->
+        <input class="filtro-radio" type="radio" name="filtro" id="f-todos" checked>
+        <input class="filtro-radio" type="radio" name="filtro" id="f-ofertas">
+        <input class="filtro-radio" type="radio" name="filtro" id="f-eletronicos">
+        <input class="filtro-radio" type="radio" name="filtro" id="f-ferramentas">
+        <input class="filtro-radio" type="radio" name="filtro" id="f-automacao">
+
+        <div class="filtros" role="group" aria-label="Filtros rápidos">
+          <label for="f-todos">Todos</label>
+          <label for="f-ofertas">Ofertas</label>
+          <label for="f-eletronicos">Eletrônicos</label>
+          <label for="f-ferramentas">Ferramentas</label>
+          <label for="f-automacao">Automação</label>
+        </div>
+
+        <!-- Grade de produtos -->
+        <div class="grade">
+
+      <!-- Card: Multímetro Digital True RMS -->
+      <article class="card" data-categoria="eletronicos">
+        <img class="card__img" src="assets/img/multimetro.svg" alt="Multímetro Digital True RMS" width="400" height="300" loading="lazy">
+        <div class="card__corpo">
+          <p class="card__categoria">Eletrônicos</p>
+          <h3 class="card__titulo">Multímetro Digital True RMS</h3>
+          <p class="card__desc">CAT III 600 V, 6000 contagens, medição de temperatura e display retroiluminado.</p>
+          <p class="card__preco"><strong>R$ 389,90</strong> <span class="card__avista">à vista</span></p>
+          <p class="card__parcela">ou 10x de R$ 38,99 sem juros</p>
+          <button class="btn" type="button">Ver detalhes</button>
+        </div>
+      </article>
+
+      <!-- Card: Furadeira de Impacto 750 W -->
+      <article class="card oferta" data-categoria="ferramentas">
+          <span class="card__selo">Oferta</span>
+        <img class="card__img" src="assets/img/furadeira.svg" alt="Furadeira de Impacto 750 W" width="400" height="300" loading="lazy">
+        <div class="card__corpo">
+          <p class="card__categoria">Ferramentas</p>
+          <h3 class="card__titulo">Furadeira de Impacto 750 W</h3>
+          <p class="card__desc">Mandril de 13 mm, velocidade variável e reversível, maleta e 2 brocas.</p>
+          <p class="card__preco"><strong>R$ 329,00</strong> <span class="card__avista">à vista</span></p>
+          <p class="card__parcela">ou 6x de R$ 54,83 sem juros</p>
+          <button class="btn" type="button">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <!-- Card: CLP Compacto 24 E/S -->
+      <article class="card" data-categoria="automacao">
+        <img class="card__img" src="assets/img/clp.svg" alt="CLP Compacto 24 E/S" width="400" height="300" loading="lazy">
+        <div class="card__corpo">
+          <p class="card__categoria">Automação</p>
+          <h3 class="card__titulo">CLP Compacto 24 E/S</h3>
+          <p class="card__desc">Alimentação 24 Vcc, 14 entradas e 10 saídas a relé, Modbus RTU e Ethernet.</p>
+          <p class="card__preco"><strong>R$ 2.490,00</strong> <span class="card__avista">à vista</span></p>
+          <p class="card__parcela">ou 10x de R$ 249,00 sem juros</p>
+          <button class="btn" type="button">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <!-- Card: Sensor Indutivo M18 PNP -->
+      <article class="card oferta" data-categoria="automacao">
+          <span class="card__selo">Oferta</span>
+        <img class="card__img" src="assets/img/sensor.svg" alt="Sensor Indutivo M18 PNP" width="400" height="300" loading="lazy">
+        <div class="card__corpo">
+          <p class="card__categoria">Automação</p>
+          <h3 class="card__titulo">Sensor Indutivo M18 PNP</h3>
+          <p class="card__desc">Distância sensora de 8 mm, saída PNP NA, proteção IP67 e cabo de 2 m.</p>
+          <p class="card__preco"><strong>R$ 119,90</strong> <span class="card__avista">à vista</span></p>
+          <p class="card__parcela">ou 3x de R$ 39,97 sem juros</p>
+          <button class="btn" type="button">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <!-- Card: Notebook Industrial 15" -->
+      <article class="card" data-categoria="eletronicos">
+        <img class="card__img" src="assets/img/notebook.svg" alt="Notebook Industrial 15"" width="400" height="300" loading="lazy">
+        <div class="card__corpo">
+          <p class="card__categoria">Eletrônicos</p>
+          <h3 class="card__titulo">Notebook Industrial 15"</h3>
+          <p class="card__desc">Intel Core i7, 16 GB de RAM, SSD de 512 GB e carcaça reforçada contra poeira.</p>
+          <p class="card__preco"><strong>R$ 5.899,00</strong> <span class="card__avista">à vista</span></p>
+          <p class="card__parcela">ou 12x de R$ 491,58 sem juros</p>
+          <button class="btn" type="button">Ver detalhes</button>
+        </div>
+      </article>
+
+      <!-- Card: Motor Trifásico 1 cv IP55 -->
+      <article class="card" data-categoria="ferramentas">
+        <img class="card__img" src="assets/img/motor.svg" alt="Motor Trifásico 1 cv IP55" width="400" height="300" loading="lazy">
+        <div class="card__corpo">
+          <p class="card__categoria">Ferramentas</p>
+          <h3 class="card__titulo">Motor Trifásico 1 cv IP55</h3>
+          <p class="card__desc">220/380 V, 4 polos, 1730 rpm, carcaça 80 e rendimento IE2.</p>
+          <p class="card__preco"><strong>R$ 1.150,00</strong> <span class="card__avista">à vista</span></p>
+          <p class="card__parcela">ou 10x de R$ 115,00 sem juros</p>
+          <button class="btn" type="button">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <!-- Card: Kit Microcontrolador IoT -->
+      <article class="card oferta" data-categoria="eletronicos">
+          <span class="card__selo">Oferta</span>
+        <img class="card__img" src="assets/img/placa.svg" alt="Kit Microcontrolador IoT" width="400" height="300" loading="lazy">
+        <div class="card__corpo">
+          <p class="card__categoria">Eletrônicos</p>
+          <h3 class="card__titulo">Kit Microcontrolador IoT</h3>
+          <p class="card__desc">Wi-Fi e Bluetooth, 32 GPIOs, 2 núcleos de 240 MHz e cabo USB incluso.</p>
+          <p class="card__preco"><strong>R$ 279,90</strong> <span class="card__avista">à vista</span></p>
+          <p class="card__parcela">ou 5x de R$ 55,98 sem juros</p>
+          <button class="btn" type="button">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <!-- Card: Fonte Chaveada 24 Vcc 10 A -->
+      <article class="card" data-categoria="automacao">
+        <img class="card__img" src="assets/img/fonte.svg" alt="Fonte Chaveada 24 Vcc 10 A" width="400" height="300" loading="lazy">
+        <div class="card__corpo">
+          <p class="card__categoria">Automação</p>
+          <h3 class="card__titulo">Fonte Chaveada 24 Vcc 10 A</h3>
+          <p class="card__desc">Entrada bivolt, saída 240 W, trilho DIN, proteção contra curto e sobrecarga.</p>
+          <p class="card__preco"><strong>R$ 459,00</strong> <span class="card__avista">à vista</span></p>
+          <p class="card__parcela">ou 6x de R$ 76,50 sem juros</p>
+          <button class="btn" type="button">Ver detalhes</button>
+        </div>
+      </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="rodape">
+    <div class="rodape__colunas">
+      <section>
+        <h2>TecnoForja</h2>
+        <p>Startup de tecnologia e soluções industriais. Protótipo desenvolvido para fins didáticos.</p>
+        <p>CNPJ 00.000.000/0001-00<br>Av. da Inovação, 1000 - Rio de Janeiro, RJ</p>
+      </section>
+      <nav aria-label="Suporte">
+        <h2>Suporte</h2>
+        <ul>
+          <li><a href="#">Central de ajuda</a></li>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Prazos de entrega</a></li>
+          <li><a href="#">Fale conosco</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Redes sociais">
+        <h2>Redes sociais</h2>
+        <ul class="rodape__redes">
+          <li><a href="#" aria-label="Instagram">IG</a></li>
+          <li><a href="#" aria-label="LinkedIn">in</a></li>
+          <li><a href="#" aria-label="YouTube">YT</a></li>
+          <li><a href="#" aria-label="WhatsApp">WA</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="rodape__direitos">&copy; 2026 TecnoForja. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
